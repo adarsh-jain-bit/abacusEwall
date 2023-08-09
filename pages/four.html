@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto';
+    }
+    .container {
+      background-image: url(/pages/image1.webp);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+    }
+    .boxes {
+      height: 475px;
+      width: 325px;
+      padding: 30px 30px 20px 30px;
+      background-color: white;
+      box-shadow: 1px 1px 10px gainsboro;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 10px;
+    }
+    .containerNew{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+position: relative;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background : conic-gradient( blue 0deg, blue 60deg, red 60deg, red 120deg, skyblue 120deg, skyblue 180deg );
+        border-radius: 50%;
+        position: absolute;
+    }
+    .box2{
+        width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 29px;
+    left: 25px;
+    }
+.box3{
+    width: 200px;
+    height: 111px;
+
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: 0px;  
+}
+.line{
+  position: absolute;
+    width: 4em;
+    height: 0.4em;
+    border-radius: 3px;
+    background: black;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    transform-origin: 0 0;
+    top: 5.6em;
+    left: 2em;
+    transform: rotate(5deg);
+    transform-origin: right;
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="boxes">
+        <h2
+          style="
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+            font-family: 'Satisfy', cursive;
+          "
+        >
+          wohnunger
+        </h2>
+        <h5
+          style="
+            position: relative;
+            right: 24px;
+            bottom: 11px;
+            font-family: sans-serif;
+            color: rgb(235, 221, 97);
+            font-size: 15px;
+            transition: 5s;
+          "
+        >
+          THUNNISSEN
+        </h5>
+       <p>user : markus ulrich</p>
+       <div style="display: grid;
+       grid-template-columns: 142px 136px;
+       row-gap: 10px;margin-top: 10px;">
+        <p style="display: flex; gap: 10px;"><i class="fa-solid fa-plug"></i>My Profile</p>
+        <p style="display: flex; gap: 10px;"><i class="fa-solid fa-arrows-rotate"></i>Charging History</p>
+        <p style="display: flex; gap: 10px;"><i class="fa-solid fa-tag"></i>Charging Plan</p>
+        <p style="display: flex; gap: 10px;"><i class="fa-solid fa-plug"></i>Blabla</p>
+       </div>
+       <p style="margin: 10px 0px;font-weight: 600;">Charging Process</p>
+       <div class="containerNew">
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="line" id="neddle"></div>
+     </div> 
+      <div style=" position: absolute; top: 63%;">
+        <div style="display: flex;
+        justify-content: space-around;">
+          <p>0</p>
+          <p>5.6Kw</p>
+          <p>10</p>
+        </div>
+        <p style="color: green;margin-top: 10px;">derzeitige Ladezeit fur 100km:2h</p>
+        <p style="margin-top: 10px;">geladen: 67.kWh @ 0.3 /kWh = 20.34</p>
+        <p style="margin-top: 10px; font-size: 15px;">lot#23. eoaiorarier-street. berlin</p>
+        <a href="/pages/index.html" style="color: rgb(98, 170, 199); font-size: 20px;display: flex;
+        justify-content: flex-end;">Back</a>
+        <p></p>
+      </div>
+      </div>
+    </div>
+    <script>
+let neddle = document.getElementById("neddle")
+let a = prompt("enter the Value" ,"120")*1
+  console.log(a)
+  if(a > 180){
+    a %= 180
+  }
+setTimeout(() => {
+  neddle.style.transition = `3s`
+  neddle.style.transform = `rotate(${a}deg)`
+}, 2000);
+    </script>
+  </body>
+
+</html>
